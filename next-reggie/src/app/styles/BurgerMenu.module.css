@@ -1,0 +1,70 @@
+.burger-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 3px 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+/* Transform the burger bars into an "X" when the menu is open */
+.bar.open:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.bar.open:nth-child(2) {
+    opacity: 0;
+}
+
+.bar.open:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Hidden menu */
+.menu {
+    transform: translateX(-110%);
+    /* Start off-screen to the left */
+    transition: transform 0.8s ease;
+    /* Smooth transition for sliding */
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    background-color: #3333335e;
+    padding: 50px 10px;
+    z-index: 999;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu.open {
+    transform: translateX(0);
+}
+
+.menu a {
+    color: white;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 18px;
+    border-bottom: 1px solid #000000;
+    transition: margin-left 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #44444436;
+    border-radius: 5px;
+    margin-left: 5px;
+}
