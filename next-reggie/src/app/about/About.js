@@ -30,8 +30,8 @@ function About() {
                         src={aboutImagePath}
                         alt="Reginald Wilson"
                         className={styles['profile-image']}
-                        width={500} // Adjust as per the image dimensions
-                        height={500} // Adjust as per the image dimensions
+                        width={500}
+                        height={500}
                     />
                 </div>
                 <div className={styles['bio-text']}>
